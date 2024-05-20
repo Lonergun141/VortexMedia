@@ -18,57 +18,59 @@ export const router = createBrowserRouter([
   {
     path: '/VortexMedia',
     element: <SignIn />,
-  },
-  {
-    path: '/VortexMedia/SignUp',
-    element: <SignUp />,
-  },
-  {
-    path: '/VortexMedia/NewsPage',
-    element: <NewsPage />,
-  },
-  {
-    path: '/VortexMedia/activate/:uid/:token',
-    element: <ActivateAccount />,
-  },
-  {
-    path: '/VortexMedia/ResetPass',
-    element: <ResetPassword />,
-  },
-  {
-    path: '/VortexMedia/password/reset/confirm/:uid/:token',
-    element: <Resetpasswordchange />,
-  },
-  {
-    path: '/VortexMedia/Home',
-    element: <Home />,
-  },
-  {
-    path: '/VortexMedia/World',
-    element: <World />,
-  },
-  {
-    path: '/VortexMedia/Politics',
-    element: <Politics />,
-  },
-  {
-    path: '/VortexMedia/Sports',
-    element: <Sports />,
-  },
-  {
-    path: '/VortexMedia/Business',
-    element: <Business />,
-  },
-  {
-    path: '/VortexMedia/Entertainment',
-    element: <Entertainment />,
-  },
-  {
-    path: '/VortexMedia/Profile',
-    element: <Profile />,
-  },
-  {
-    path: '*',
-    element: <NotFound />,
+    children: [
+      {
+        path: '/VortexMedia/SignUp',
+        element: <SignUp />,
+      },
+      {
+        path: '/VortexMedia/NewsPage',
+        element: <NewsPage />,
+      },
+      {
+        path: '/VortexMedia/activate/:uid/:token',
+        element: <ActivateAccount />,
+      },
+      {
+        path: '/VortexMedia/ResetPass',
+        element: <ResetPassword />,
+      },
+      {
+        path: '/VortexMedia/password/reset/confirm/:uid/:token',
+        element: <Resetpasswordchange />,
+      },
+      {
+        path: '/VortexMedia/Home',
+        element: <Home />,
+      },
+      {
+        path: '/VortexMedia/World',
+        element: <World />,
+      },
+      {
+        path: '/VortexMedia/Politics',
+        element: <Politics />,
+      },
+      {
+        path: '/VortexMedia/Sports',
+        element: <Sports />,
+      },
+      {
+        path: '/VortexMedia/Business',
+        element: <Business />,
+      },
+      {
+        path: '/VortexMedia/Entertainment',
+        element: <Entertainment />,
+      },
+      {
+        path: '/VortexMedia/Profile',
+        element: <Profile />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
+      },
+    ],
   },
 ]);
