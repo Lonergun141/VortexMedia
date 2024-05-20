@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
 
-const BACKEND_DOMAIN = 'http://192.168.1.2:8000';
+const BACKEND_DOMAIN = 'd4ngk.pythonanywhere.com';
 
 const REGISTER_URL = `${BACKEND_DOMAIN}/api/v1/auth/users/`;
 const LOGIN_URL = `${BACKEND_DOMAIN}/api/v1/auth/jwt/create/`;
