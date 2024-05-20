@@ -15,61 +15,60 @@ import Profile from './pages/profile/profile';
 import NotFound from './pages/notFound';
 
 export const router = createBrowserRouter([
-	
-	{
-		path: '/',
-		element: <SignIn />,
-	},
-	{
-		path: '/SignUp',
-		element: <SignUp />,
-	},
-	{
-		path: '/NewsPage',
-		element: <NewsPage />,
-	},
-	{
-		path: '/activate/:uid/:token',
-		element: <ActivateAccount />,
-	},
-	{
-		path: '/ResetPass',
-		element: <ResetPassword />,
-	},
-	{
-		path: '/password/reset/confirm/:uid/:token',
-		element: <Resetpasswordchange />,
-	},
-	{
-		path: '/Home',
-		element: <Home />,
-	},
-	{
-		path: '/World',
-		element: <World />,
-	},
-	{
-		path: '/Politics',
-		element: <Politics />,
-	},
-	{
-		path: '/Sports',
-		element: <Sports />,
-	},
-	{
-		path: '/Business',
-		element: <Business />,
-	},
-	{
-		path: '/Entertainment',
-		element: <Entertainment />,
-	},
-	{
-		path: '/Profile',
-		element: <Profile />,
-	},
-	{
-		path: '*',
-		element: <NotFound />,
-	},
+  {
+    path: '/VortexMedia',
+    element: <SignIn />,
+  },
+  {
+    path: '/VortexMedia/SignUp',
+    element: <SignUp />,
+  },
+  {
+    path: '/VortexMedia/NewsPage',
+    element: <NewsPage />,
+  },
+  {
+    path: '/VortexMedia/activate/:uid/:token',
+    element: <ActivateAccount />,
+  },
+  {
+    path: '/VortexMedia/ResetPass',
+    element: <ResetPassword />,
+  },
+  {
+    path: '/VortexMedia/password/reset/confirm/:uid/:token',
+    element: <Resetpasswordchange />,
+  },
+  {
+    path: '/VortexMedia/Home',
+    element: <Home />,
+  },
+  {
+    path: '/VortexMedia/World',
+    element: <World />,
+  },
+  {
+    path: '/VortexMedia/Politics',
+    element: <Politics />,
+  },
+  {
+    path: '/VortexMedia/Sports',
+    element: <Sports />,
+  },
+  {
+    path: '/VortexMedia/Business',
+    element: <Business />,
+  },
+  {
+    path: '/VortexMedia/Entertainment',
+    element: <Entertainment />,
+  },
+  {
+    path: '/VortexMedia/Profile',
+    element: <Profile />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
+  },
 ]);
