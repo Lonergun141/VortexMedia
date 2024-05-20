@@ -17,55 +17,55 @@ import NotFound from './pages/notFound';
 export const router = createBrowserRouter([
 	
 	{
-		path: '/',
+		path: '/VortexMedia/',
 		element: <SignIn />,
 	},
 	{
-		path: '/SignUp',
+		path: '/VortexMedia/SignUp',
 		element: <SignUp />,
 	},
 	{
-		path: '/NewsPage',
+		path: '/VortexMedia/NewsPage',
 		element: <NewsPage />,
 	},
 	{
-		path: '/activate/:uid/:token',
+		path: '/VortexMedia/activate/:uid/:token',
 		element: <ActivateAccount />,
 	},
 	{
-		path: '/ResetPass',
+		path: '/VortexMedia/ResetPass',
 		element: <ResetPassword />,
 	},
 	{
-		path: '/password/reset/confirm/:uid/:token',
+		path: '/VortexMedia/password/reset/confirm/:uid/:token',
 		element: <Resetpasswordchange />,
 	},
 	{
-		path: '/Home',
+		path: '/VortexMedia/Home',
 		element: <Home />,
 	},
 	{
-		path: '/World',
+		path: '/VortexMedia/World',
 		element: <World />,
 	},
 	{
-		path: '/Politics',
+		path: '/VortexMedia/Politics',
 		element: <Politics />,
 	},
 	{
-		path: '/Sports',
+		path: '/VortexMedia/Sports',
 		element: <Sports />,
 	},
 	{
-		path: '/Business',
+		path: '/VortexMedia/Business',
 		element: <Business />,
 	},
 	{
-		path: '/Entertainment',
+		path: '/VortexMedia/Entertainment',
 		element: <Entertainment />,
 	},
 	{
-		path: '/Profile',
+		path: '/VortexMedia/Profile',
 		element: <Profile />,
 	},
 	{
