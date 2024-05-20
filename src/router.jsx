@@ -12,7 +12,7 @@ import Sports from './pages/newsPage/sports';
 import Business from './pages/newsPage/business';
 import Entertainment from './pages/newsPage/entertainment';
 import Profile from './pages/profile/profile';
-
+import NotFound from './pages/notFound';
 
 export const router = createBrowserRouter([
 	
@@ -67,5 +67,9 @@ export const router = createBrowserRouter([
 	{
 		path: '/Profile',
 		element: <Profile />,
+	},
+	{
+		path: '*',
+		element: <NotFound />,
 	},
 ]);
