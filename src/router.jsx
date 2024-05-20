@@ -15,6 +15,7 @@ import Profile from './pages/profile/profile';
 import NotFound from './pages/notFound';
 
 export const router = createBrowserRouter([
+	
 	{
 		path: '/',
 		element: <SignIn />,
@@ -71,6 +72,4 @@ export const router = createBrowserRouter([
 		path: '*',
 		element: <NotFound />,
 	},
-
-
 ]);
