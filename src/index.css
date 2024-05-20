@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Juana';
+  src: url('../../assets/fonts/Juana-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../assets/fonts/Inter-ExtraLight.ttf') format('truetype'),
+       url('../../assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('../../assets/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+
+:root {
+
+  --font-family-juana: 'Juana', sans-serif;
+  --font-family-inter: 'Inter', sans-serif;
+  color-scheme: light dark;
+  background-color: #ffffff;
+
+  --br-7xs: 6px;
+
+  --color-white: #ffffff;
+  --color-blue: #63a7ff;
+  --color-dark-purple: #060321;
+  --color-light-gray: #a0a1a3;
+  --color-black: #000000;
+  --color-background: #eef0f8;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+

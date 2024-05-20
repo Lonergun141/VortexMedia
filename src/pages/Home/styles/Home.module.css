@@ -1,0 +1,29 @@
+.container {
+    display: block;
+    max-width: calc(100vw * 1600/1900); 
+    margin: 0 auto;
+    padding: 0 1rem; 
+  }
+  
+  .content {
+    padding: 2rem;
+
+  }
+  
+  .discover {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .discover {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .discover {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    }
+  }

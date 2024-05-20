@@ -1,0 +1,39 @@
+.content {
+    height: 100vh;
+    padding: calc(100vw * 180/1900) calc(100vw * 20/1900) 0 calc(100vw * 20/1900);
+}
+
+h3 {
+    color: black;
+    font-family: 'Inter';
+    font-size: calc(100vw * 45/1900);
+}
+
+.user {
+    line-height: 0;
+    color: black;
+    font-family: 'Inter';
+    font-size: calc(100vw * 32/1900);
+}
+
+.modalP {
+    color: black;
+    font-family: 'Inter';
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        padding: 25% 5% 0 5%;
+        flex-direction: row;
+    }
+
+    h3 {
+        font-size: 3rem; /* Adjust as needed */
+    }
+
+    .user {
+        font-size: 2rem; /* Adjust as needed */
+    }
+}

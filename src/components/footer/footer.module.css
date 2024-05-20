@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Juana';
+    src: url('../../assets/fonts/Juana-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../assets/fonts/Inter-ExtraLight.ttf') format('truetype'),
+         url('../../assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('../../assets/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 2vh 5vw;
+    width: 100%;
+    min-height: 22vh; 
+    box-sizing: border-box;
+
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.leftContent, .logoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+    font-family: 'Juana', sans-serif;
+    font-size: 11.4vw;
+    margin: 0;
+    line-height: 1;
+}
+
+.vortex {
+    color: #63A7FF;
+}
+
+.media {
+    color: #1C1E21;
+}
+
+.categories {
+    font-family: 'Inter';
+    font-weight: 200;
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px; 
+    margin: 2vh 0;
+    color: #1C1E21 !important;
+    padding-left: 2vw; 
+}
+
+.links, .bottomText {
+    font-family: 'Inter';
+    font-weight: 200;
+    font-size: 1.4vw;
+    color: #1C1E21;
+    text-align: left;
+    padding: 1vh 0 1vh 2vw; 
+}
+
+.contactButton {
+    font-size: 1.2vw;
+    color: #1C1E21;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 2vh 0 2vh 2vw;
+    align-self: flex-start;
+    position: relative;
+}
+
+.divider {
+    border-bottom: 1px solid #D9D9D9;
+    width: 80%;
+    margin: 1vh 0;
+}
+
+.termsSection {
+    text-align: left;
+    padding: 0;
+    width: 100%; 
+}
+
+.logo {
+    width: 15vw;
+    height: auto;
+    min-width: 120px; 
+    min-height: 120px; 
+}
+
+.logoWrapper {
+    align-self: center;
+}
+
+.bottomText {
+    font-family: 'Inter-SemiBold';
+    font-weight: 400;
+    font-size: 1vw;
+    padding: 1vh 0 1vh 2vw;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .title {
+        font-size: 5.5vw; 
+    }
+
+    .categories {
+        gap: 3vw; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .contactButton {
+        font-size: 2.5vw; 
+    }
+
+    .logo {
+        width: 30vw; 
+        min-width: 80px; 
+    }
+
+    .topSection {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .links, .bottomText {
+        font-size: 3.5vw; 
+    }
+}

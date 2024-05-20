@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('../../assets/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('../../assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+}
+
+.logoContainer img {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.signInText h2 {
+  font-family: 'Inter-SemiBold';
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1C1C1C;
+}
+
+.signInText .textInput, .signInText .button {
+  margin-bottom: 16px; /* textfield and button margin*/
+}
+
+.signInStyles.button {
+  background-color: #1C1C1C;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+  font-weight: bold; 
+  cursor: pointer;
+}
+
+.underlineLink, .registerLink {
+  text-decoration: underline; /* Add underline to make it always visible */
+  color: #1C1C1C;
+  font-family: 'Inter-Regular';
+  margin: 20px 0; 
+  cursor: pointer;
+  display: block; 
+  font-size: 0.85em; 
+}
+
+.underlineLink:hover, .registerLink:hover {
+  text-decoration: underline; 
+  color: #1C1C1C; 
+  font-size: 0.85em; 
+}
+
+.registerLink {
+  text-align: center; 
+  font-size: 0.85em; 
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin: 20px 0;
+}
+
+.accountText {
+  text-align: center;
+  color: #1C1C1C; 
+  font-family: 'Inter-Regular';
+}
+
+.wordCloudContainer {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wordCloudContainer img {
+  width: 80%;
+  height: auto;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #eaeaea;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .leftContainer, .wordCloudContainer {
+    max-width: 100%;
+  }
+
+  .wordCloudContainer img {
+    width: 100%;
+  }
+}

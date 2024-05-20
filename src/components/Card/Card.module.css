@@ -1,0 +1,79 @@
+  
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rcap 3rcap;
+
+  }
+
+  .cardContainer {
+    max-width: 800px;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .img {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .newsProvider {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+    font-weight: 300;
+    font-family: 'Inter';
+  }
+  
+  .headline {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+    font-family: 'Inter-SemiBold';
+  }
+  
+  .headline:hover{
+    text-decoration: underline;
+  }
+  .desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+    font-family: 'Inter';
+  }
+  
+  .auth {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: var(--color-light-gray);
+    font-family: 'Inter';
+  }
+  
+  .date {
+    font-size: 0.8rem;
+    color: var(--color-light-gray);
+    font-family: 'Inter';
+  }
+  
+  @media (max-width: 767px) {
+    .cardContainer {
+      padding: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .cardContainer {
+      padding: 0.5rem;
+    }
+  }
