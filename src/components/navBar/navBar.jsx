@@ -63,11 +63,11 @@ const NavigationBar = () => {
       <div className={Styles.navLinks}>
         {user && (
           <>
-            <Link to="/World">WORLD</Link>
-            <Link to="/Politics">TECHNOLOGY</Link>
-            <Link to="/Sports">SPORTS</Link>
-            <Link to="/Business">BUSINESS</Link>
-            <Link to="/Entertainment">ENTERTAINMENT</Link>
+            <Link to="/VortexMedia/World">WORLD</Link>
+            <Link to="/VortexMedia/Politics">TECHNOLOGY</Link>
+            <Link to="/VortexMedia/Sports">SPORTS</Link>
+            <Link to="/VortexMedia/Business">BUSINESS</Link>
+            <Link to="/VortexMedia/Entertainment">ENTERTAINMENT</Link>
           </>
         )}
       </div>

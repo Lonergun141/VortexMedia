@@ -5,7 +5,6 @@ import SignUp from './pages/authentication/signUp';
 import ActivateAccount from './pages/authentication/activateAccount';
 import ResetPassword from './pages/authentication/resetpassword';
 import Resetpasswordchange from './pages/authentication/resetpasswordchange';
-import Home from './pages/Home/Home';
 import World from './pages/newsPage/world';
 import Politics from './pages/newsPage/politics';
 import Sports from './pages/newsPage/sports';
@@ -38,10 +37,6 @@ export const router = createBrowserRouter([
 	{
 		path: '/VortexMedia/password/reset/confirm/:uid/:token',
 		element: <Resetpasswordchange />,
-	},
-	{
-		path: '/VortexMedia/Home',
-		element: <Home />,
 	},
 	{
 		path: '/VortexMedia/World',

@@ -78,7 +78,7 @@ const SignIn = () => {
 		}
 
 		if (isSuccess || user) {
-			navigate('/World');
+			navigate('/VortexMedia/World');
 			localStorage.setItem('accessToken', accessToken);
 		}
 
@@ -121,12 +121,12 @@ const SignIn = () => {
 							name="password"
 						/>
 						<Button label="Continue" onClick={handleLogin} className={Styles.button} />
-						<Link to="/ResetPass" className={Styles.underlineLink}>
+						<Link to="/VortexMedia/ResetPass" className={Styles.underlineLink}>
 							Forgot Password?
 						</Link>
 						<hr className={Styles.divider} />
 						<p className={Styles.accountText}>Dont have an account?</p>
-						<Link to="/SignUp" className={Styles.registerLink}>
+						<Link to="/VortexMedia/SignUp" className={Styles.registerLink}>
 							Register Now
 						</Link>
 					</div>
