@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import SignIn from './pages/authentication/signIn';
 import NewsPage from './pages/newsPage/newsPage';
 import SignUp from './pages/authentication/signUp';
@@ -14,7 +14,7 @@ import Entertainment from './pages/newsPage/entertainment';
 import Profile from './pages/profile/profile';
 import NotFound from './pages/notFound';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/VortexMedia',
     element: <SignIn />,
