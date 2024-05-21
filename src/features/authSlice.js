@@ -12,7 +12,7 @@ const initialState = {
 	message: '',
 };
 
-export const register = createAsyncThunk('auth/register', async (userData, thunkAPI) => {
+export const register = createAsyncThunk('auth/users', async (userData, thunkAPI) => {
 	try {
 		return await authService.register(userData);
 	} catch (error) {
