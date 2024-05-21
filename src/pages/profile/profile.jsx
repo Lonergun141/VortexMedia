@@ -32,7 +32,7 @@ const Profile = () => {
             if (deleteUser.fulfilled.match(resultAction)) {
                 await dispatch(logout());
                 dispatch(reset());
-				navigate('/VortexMedia/SignIn');
+				navigate('/VortexMedia/');
             }
         } catch (error) {
             console.error('Error deleting account:', error);
