@@ -12,12 +12,14 @@ const Footer = () => {
           </h1>
           <div className={footerStyles.categories}>
             <span>World</span>
-            <span>Politics</span>
+            <span>Technology</span>
             <span>Sports</span>
             <span>Business</span>
             <span>Entertainment</span>
           </div>
-          <button className={footerStyles.contactButton}>Contact Developers</button>
+          <a href="mailto:vortex.media@gmail.com" className={footerStyles.contactButton}>
+            Contact Developers
+          </a>
         </div>
         <div className={footerStyles.logoWrapper}>
           <img src={BigLogo} alt="Vortex Media Logo" className={footerStyles.logo} />
