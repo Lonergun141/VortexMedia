@@ -15,7 +15,7 @@ import NotFound from './pages/notFound';
 
 export const router = createBrowserRouter([
 	{
-		path: '/VortexMedia/SignIn',
+		path: '/VortexMedia/',
 		element: <SignIn />,
 	},
 	{
