@@ -21,7 +21,7 @@ const NavigationBar = () => {
       .unwrap()
       .then(() => {
         localStorage.removeItem('accessToken'); 
-        navigate('/SignIn');
+        <Link to="/VortexMedia/"/>
       })
       .catch((error) => {
         console.error('Logout error:', error);
