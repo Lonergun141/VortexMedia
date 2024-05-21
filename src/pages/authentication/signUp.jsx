@@ -33,7 +33,7 @@ const SignUp = () => {
 	};
 
 	const handleBack = () => {
-		navigate('/VortexMedia/SignIn');
+		navigate('/VortexMedia/');
 		dispatch(reset());
 	};
 
