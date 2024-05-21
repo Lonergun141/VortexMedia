@@ -16,7 +16,7 @@ import NotFound from './pages/notFound';
 
 export const router = createHashRouter([
   {
-    path: '/VortexMedia',
+    path: '/VortexMedia/',
     element: <SignIn />,
     children: [
       {
