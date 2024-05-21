@@ -32,7 +32,7 @@ const ActivateAccount = () => {
 		}
 
 		if (isSuccess) {
-			navigate('/VortexMedia/SignIn');
+			navigate('/VortexMedia/');
 		}
 
 		dispatch(reset());
