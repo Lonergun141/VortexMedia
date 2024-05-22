@@ -37,7 +37,7 @@ const NavigationBar = () => {
       const category = 'general';
       const accessToken = localStorage.getItem('accessToken'); 
       dispatch(fetchSearchedNews({ query: searchTerm, category, accessToken }));
-      navigate(`/NewsPage?query=${searchTerm}`);
+      navigate(`/VortexMedia/NewsPage?query=${searchTerm}`);
     } catch (error) {
       console.error('Error fetching search results:', error);
     }
