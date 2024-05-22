@@ -6,7 +6,7 @@ import Footer from '../../components/footer/footer';
 import NavigationBar from '../../components/navBar/navBar';
 import styles from './styles/profile.module.css';
 import DeleteIcon from '@mui/icons-material/Delete';
-import QR from '../../assets/qr/frame.jpg';
+import QR from '../../assets/qr/frame.png';
 import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
