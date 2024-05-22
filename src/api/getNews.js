@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
 
-const API_BASE_URL = 'http://192.168.1.2:8000/api/news';
+const API_BASE_URL = 'https://d4ngk.pythonanywhere.com/api/news';
 
 export const getNews = async (accessToken, category, country) => {
   const config = {
