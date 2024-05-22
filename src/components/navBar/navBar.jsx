@@ -53,7 +53,7 @@ const NavigationBar = () => {
       {isMenuOpen && (
         <div className={`${Styles.dropdownMenu} ${isMenuOpen ? 'active' : ''}`}>
           <Link to="/more">More on Vortex Media</Link>
-          {user && <Link to="/Profile">Profile</Link>}
+          {user && <Link to="/VortexMedia/Profile">Profile</Link>}
           <button className={`${Styles.logoutButton}`} onClick={handleLogout}>
             Sign Out
           </button>
