@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
 		element: <NewsPage />,
 	},
 	{
-		path: '/VortexMedia/activate/:uid/:token',
+		path: 'VortexMedia/activate/:uid/:token',
 		element: <ActivateAccount />,
 	},
 	{
