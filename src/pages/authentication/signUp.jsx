@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Styles from './styles/authentication.module.css';
 import Logo from '../../assets/images/blackLogo.png';
 import World from '../../assets/images/worldWord.png';
-import GIF from '../../assets/images/mail-delivery.gif'
+import GIF from '../../assets/images/maildelivery.gif'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
