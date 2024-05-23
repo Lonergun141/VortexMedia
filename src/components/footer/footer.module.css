@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'Juana';
-    src: url('../../assets/fonts/Juana-Regular.otf') format('opentype');
+    src: url('../../assets/fonts/JuanaRegular.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('../../assets/fonts/Inter-ExtraLight.ttf') format('truetype'),
-         url('../../assets/fonts/Inter-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/InterExtraLight.ttf') format('truetype'),
+         url('../../assets/fonts/InterRegular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Inter-SemiBold';
-    src: url('../../assets/fonts/Inter-SemiBold.ttf') format('truetype');
+    src: url('../../assets/fonts/InterSemiBold.ttf') format('truetype');
 }
 
 .footer {

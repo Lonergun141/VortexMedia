@@ -35,7 +35,6 @@ const SignUp = () => {
 
 	const handleBack = () => {
 		navigate('/VortexMedia/');
-		dispatch(reset());
 	};
 
 	const [formData, setFormData] = useState({
