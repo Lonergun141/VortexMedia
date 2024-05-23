@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'Inter-SemiBold';
+    font-family: 'InterSemiBold';
     src: url('../../assets/fonts/InterSemiBold.ttf') format('truetype');
 }
 
@@ -109,7 +109,7 @@
 }
 
 .bottomText {
-    font-family: 'Inter-SemiBold';
+    font-family: 'InterSemiBold';
     font-weight: 400;
     font-size: 1vw;
     padding: 1vh 0 1vh 2vw;

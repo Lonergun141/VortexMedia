@@ -23,7 +23,7 @@
 	left: -30%;
 	color: var(--color-blue);
 	position: absolute;
-	font-family: 'Incompleeta';
+	font-family: 'Juana';
 	font-size: 200px;
 	opacity: 0.2;
 	z-index: -1;
@@ -33,7 +33,7 @@
 	right: -26.99%;
 	top: -3%;
 	position: absolute;
-	font-family: 'Incompleeta';
+	font-family: 'Juana';
 	font-size: 200px;
 	opacity: 0.2;
 	z-index: -1;
@@ -43,14 +43,14 @@
 	position: absolute;
 	right: -35%;
 	top: 24%;
-	font-family: 'Incompleeta';
+	font-family: 'Juana';
 	font-size: 200px;
 	color: transparent;
 	opacity: 0.2;
   }
   
   .rightTextOutline::before {
-	content: 'QuickEase';
+	content: 'VortexMedia';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -60,13 +60,13 @@
   
   .container h1 {
 	font-size: 60px;
-	font-family: 'Incompleeta';
+	font-family: 'Juana';
 	color: var(--color-dark-purple);
   }
   
   .content h1 {
 	font-size: 60px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Juana', sans-serif;
 	color: var(--color-dark-purple);
 	font-weight: 500;
   }
@@ -88,7 +88,7 @@
   
   .container p {
 	font-size: 16px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'InterSemiBold';
 	color: var(--color-dark-purple);
 	text-align: center;
 	margin-bottom: 50px;
@@ -108,7 +108,7 @@
 	text-align: center;
 	padding: 10px 0;
 	font-size: 14px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'InterSemiBold';
 	color: var(--color-blue);
 	cursor: pointer;
   }
