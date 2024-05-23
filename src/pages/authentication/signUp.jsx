@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Styles from './styles/authentication.module.css';
 import Logo from '../../assets/images/blackLogo.png';
 import World from '../../assets/images/worldWord.png';
+import GIF from '../../assets/GIF/mail-delivery.gif'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -147,7 +148,7 @@ const SignUp = () => {
 						sx={{ fontSize: '35px', fontWeight: 'bold', mb: 2, fontFamily: 'JuanaMedium' }}>
 						<img src={Logo} alt="Vortex Media Logo" />
 					</Typography>
-					<img src="/public/GIF/mail-delivery.gif" alt="Envelope Icon" style={{ width: '200px', height: '200px' }} />
+					<img src={GIF} alt="Envelope Icon" style={{ width: '200px', height: '200px' }} />
 					<Typography
 						id="modal-modal-description"
 						sx={{ mt: 1, textAlign: 'center', mb: 1, fontSize: '30px', fontWeight: 'Medium', fontFamily: 'Poppins' }}>
