@@ -147,7 +147,7 @@ const SignUp = () => {
 						sx={{ fontSize: '35px', fontWeight: 'bold', mb: 2, fontFamily: 'JuanaMedium' }}>
 						<img src={Logo} alt="Vortex Media Logo" />
 					</Typography>
-					<img src="src/assets/GIF/mail-delivery.gif" alt="Envelope Icon" style={{ width: '200px', height: '200px' }} />
+					<img src="/public/GIF/mail-delivery.gif" alt="Envelope Icon" style={{ width: '200px', height: '200px' }} />
 					<Typography
 						id="modal-modal-description"
 						sx={{ mt: 1, textAlign: 'center', mb: 1, fontSize: '30px', fontWeight: 'Medium', fontFamily: 'Poppins' }}>
