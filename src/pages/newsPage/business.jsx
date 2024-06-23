@@ -26,7 +26,7 @@ const Business = () => {
 	const accessToken = useSelector((state) => state.auth.user.access);
 
 	useEffect(() => {
-		const category = 'entertainment';
+		const category = 'business';
 		const country = 'us';
 
 		dispatch(fetchNews({ category, country, accessToken }));

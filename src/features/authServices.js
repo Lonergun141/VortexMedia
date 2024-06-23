@@ -10,7 +10,6 @@ const RESET_PASSWORD_URL = `${BACKEND_DOMAIN}/api/v1/auth/users/reset_password/`
 const RESET_PASSWORD_CONFIRM_URL = `${BACKEND_DOMAIN}/api/v1/auth/users/reset_password_confirm/`;
 const GET_USER_INFO = `${BACKEND_DOMAIN}/api/v1/auth/users/me/`;
 const DELETE_USER = `${BACKEND_DOMAIN}/api/v1/auth/users/me/`;
-
 // Register user
 
 const register = async (userData) => {
@@ -106,26 +105,25 @@ const getUserInfo = async (accessToken) => {
 };
 
 export const deleteUser = async (accessToken, currentPassword) => {
-    const config = {
-        headers: {
-            Authorization: `Bearer ${accessToken}`,
-        },
-    };
-    const requestData = { current_password: currentPassword };
-    try {
-        await axios.delete(DELETE_USER, { ...config, data: requestData });
-        return true;
-    } catch (error) {
-        if (error.response && error.response.status === 400) {
-            console.error('Incorrect password:', error.response.data.message);
-            return false;
-        } else {
-            console.error('Error deleting user:', error.message);
-            return false;
-        }
-    }
+	const config = {
+		headers: {
+			Authorization: `Bearer ${accessToken}`,
+		},
+	};
+	const requestData = { current_password: currentPassword };
+	try {
+		await axios.delete(DELETE_USER, { ...config, data: requestData });
+		return true;
+	} catch (error) {
+		if (error.response && error.response.status === 400) {
+			console.error('Incorrect password:', error.response.data.message);
+			return false;
+		} else {
+			console.error('Error deleting user:', error.message);
+			return false;
+		}
+	}
 };
-
 
 
 
@@ -138,7 +136,6 @@ const authService = {
 	resetPasswordConfirm,
 	getUserInfo,
 	deleteUser,
-
 };
 
 export default authService;

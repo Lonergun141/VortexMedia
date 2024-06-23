@@ -6,6 +6,8 @@ import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import React from 'react';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const TextInput = ({
     label,
@@ -19,10 +21,12 @@ const TextInput = ({
     marginTop,
     nameError,
     PassNotMatch,
-    
+    width,
     ...props
 }) => {
     const [showPassword, setShowPassword] = React.useState(false);
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -37,7 +41,8 @@ const TextInput = ({
                 marginLeft: marginLeft,
                 marginTop: marginTop,
                 textAlign: 'center',
-                width: 'auto',
+                width: isSmallScreen ? '100%' : width,
+                padding: isSmallScreen ? '0 0' : '0',
             }}>
             <TextField
                 fullWidth
@@ -56,7 +61,7 @@ const TextInput = ({
                         : passwordError && error
                         ? 'Please enter a password and valid email'
                         : emailError
-                        ? 'Please enter a validemail'
+                        ? 'Please enter a valid email'
                         : passwordError
                         ? 'Please enter a valid password'
                         : nameError
@@ -66,7 +71,6 @@ const TextInput = ({
                         :''
                 }
                 InputProps={
-            
                     password
                         ? {
                               endAdornment: (
@@ -100,7 +104,8 @@ TextInput.propTypes = {
     marginBottom: PropTypes.number,
     marginTop: PropTypes.number,
     nameError: PropTypes.bool,
-    PassNotMatch: PropTypes.bool
+    PassNotMatch: PropTypes.bool,
+    width: PropTypes.number,
 };
 
 export default TextInput;

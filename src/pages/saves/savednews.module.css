@@ -1,0 +1,217 @@
+.savedNewsListContainer {
+    display: flex;
+    max-width: calc(100vw * 1700 / 1900);
+    margin: 10% auto;
+    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: black;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.newsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cardContainer {
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 10px;
+}
+
+.source {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.bookmarkIcon {
+    color: #63a7ff;
+    margin-right: 5px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #63a7ff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.removeButton {
+    background-color: #ff4d4f;
+}
+
+.cancelButton {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.saveButton {
+    background-color: #63a7ff;
+}
+
+.modalBox {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    margin: 100px auto;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modalTextField {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .newsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .cardContainer {
+        padding: 10px;
+    }
+
+    .image {
+        height: 150px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .modalBox {
+        width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+}
+
+.noteContainer {
+    background-color: #63a7ff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.noteTitle {
+    color: white;
+    margin-right: 10px;
+}
+
+.titleLink {
+    color: #333;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+.sectionDivider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 5%;
+    flex-direction: row;
+}
+
+.blueBar {
+    background-color: #63a7ff;
+    height: 20px;
+    width: 140px;
+}
+
+.blackBar {
+    background-color: #000;
+    height: 1px;
+    width: 100%;
+}
+
+.title h3{
+    color: black;
+    font-size: 4rem;
+    font-family: 'inter';
+}
+
+.titleLink:hover {
+    text-decoration: underline;
+}
+
+.noteText {
+    color: white;
+    margin: 0;
+}
+.description{
+    color: gray;
+}
+

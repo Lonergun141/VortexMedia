@@ -12,6 +12,7 @@ import Business from './pages/newsPage/business';
 import Entertainment from './pages/newsPage/entertainment';
 import Profile from './pages/profile/profile';
 import NotFound from './pages/notFound';
+import SavedNewsList from './pages/saves/SavedNews';
 
 export const router = createBrowserRouter([
 	{
@@ -61,6 +62,10 @@ export const router = createBrowserRouter([
 	{
 		path: '/VortexMedia/Profile',
 		element: <Profile />,
+	},
+	{
+		path: '/VortexMedia/SavedNewsList',
+		element: <SavedNewsList />,
 	},
 	{
 		path: '*',

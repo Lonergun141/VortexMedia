@@ -127,7 +127,7 @@ const World = () => {
 								height: '20px',
 								width: '140px',
 							}}></div>
-						<div style={{ backgroundColor: '#000', height: '1px', width: '90%' }}></div>
+						<div style={{ backgroundColor: '#000', height: '1px', width: '100%' }}></div>
 					</div>
 					<div>
 						<h3 style={{ color: 'black', fontSize: '4rem', fontFamily: 'inter' }}>WORLD</h3>

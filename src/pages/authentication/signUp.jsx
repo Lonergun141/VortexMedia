@@ -1,41 +1,28 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
+import { useState, useEffect } from 'react';
+import {useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import { Modal, Box, Typography, CircularProgress } from '@mui/material';
+import { register, reset } from '../../features/authSlice';
 import Footer from '../../components/footer/footer';
 import TextInput from '../../components/textField/textField';
 import Button from '../../components/button/button';
-import { Link } from 'react-router-dom';
-import Styles from './styles/authentication.module.css';
-import Logo from '../../assets/images/blackLogo.png';
-import World from '../../assets/images/worldWord.png';
-import GIF from '../../assets/images/maildelivery.gif'
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Modal, Box, Typography, Backdrop, Fade, CircularProgress } from '@mui/material';
-import { register, reset } from '../../features/authSlice';
 import PasswordStrength from '../../components/PasswordMeter/PasswordStrengthMeter';
+import Styles from './styles/authentication.module.css';
+import GIF from '../../assets/images/maildelivery.gif';
+import NewsPaper from '../../assets/images/newspaper.jpg';
+import 'react-toastify/dist/ReactToastify.css';
+import Logo from '../../assets/images/vlogo.png';
 
 const SignUp = () => {
 	const [open, setOpen] = useState(false);
-
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
-
 	const [showRequirements, setShowRequirements] = useState(false);
 
-	const handlePasswordFocus = () => {
-		setShowRequirements(true);
-	};
-
-	const handlePasswordBlur = () => {
-		setShowRequirements(false);
-	};
-
-	const handleBack = () => {
-		navigate('/VortexMedia/');
-	};
+	const handlePasswordFocus = () => setShowRequirements(true);
+	const handlePasswordBlur = () => setShowRequirements(false);
+	const handleBack = () => navigate('/VortexMedia/');
 
 	const [formData, setFormData] = useState({
 		firstname: '',
@@ -44,22 +31,20 @@ const SignUp = () => {
 		password: '',
 		re_password: '',
 	});
+
 	const [formErrors, setFormErrors] = useState({
 		email: false,
 		name: false,
 		password: false,
 	});
 
-	const { user, isLoading, isError, message, isSuccess } = useSelector((state) => state.auth);
 	const { firstname, lastname, email, password, re_password } = formData;
+	const { user, isLoading, isError, message, isSuccess } = useSelector((state) => state.auth);
 
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
-	const validateEmail = (email) => {
-		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		return emailRegex.test(email);
-	};
+	const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 	const handleChange = (e) => {
 		setFormData((prev) => ({
@@ -67,8 +52,6 @@ const SignUp = () => {
 			[e.target.name]: e.target.value,
 		}));
 	};
-
-	//register
 
 	const handleRegistration = (e) => {
 		e.preventDefault();
@@ -145,7 +128,7 @@ const SignUp = () => {
 						variant="h5"
 						component="h1"
 						sx={{ fontSize: '35px', fontWeight: 'bold', mb: 2, fontFamily: 'JuanaMedium' }}>
-						<img src={Logo} alt="Vortex Media Logo" />
+						<img src={Logo} alt="Vortex Media Logo" style={{ width: '100px', height: '100px' }}  />
 					</Typography>
 					<img src={GIF} alt="Envelope Icon" style={{ width: '200px', height: '200px' }} />
 					<Typography
@@ -171,12 +154,12 @@ const SignUp = () => {
 				</Box>
 			</Modal>
 			<div className={Styles.content}>
+				<div className={Styles.wordCloudContainer}>
+					<img src={NewsPaper} alt="World word cloud" />
+				</div>
 				<div className={Styles.leftContainer}>
-					<div className={Styles.logoContainer}>
-						<img src={Logo} alt="Vortex Media Logo" />
-					</div>
 					<div className={Styles.signInText}>
-						<h2>Enter your account information</h2>
+						<h2>Create an account to start browsing</h2>
 						<TextInput
 							label="Firstname"
 							marginBottom={2}
@@ -186,7 +169,7 @@ const SignUp = () => {
 							name="firstname"
 						/>
 						<TextInput
-							width={500}
+							width="100%"
 							label="Lastname"
 							marginBottom={2}
 							value={formData.lastname}
@@ -196,7 +179,7 @@ const SignUp = () => {
 						/>
 						<TextInput
 							label="Email Address"
-							width={500}
+							width="100%"
 							marginBottom={2}
 							emailError={formErrors.email}
 							value={formData.email}
@@ -206,7 +189,7 @@ const SignUp = () => {
 						<TextInput
 							label="Password"
 							password
-							width={500}
+							width="100%"
 							onChange={handleChange}
 							marginBottom={2}
 							passwordError={formErrors.password}
@@ -223,7 +206,7 @@ const SignUp = () => {
 						<TextInput
 							label="Confirm Password"
 							password
-							width={500}
+							width="100%"
 							marginTop={2}
 							marginBottom={2}
 							passwordError={formErrors.password}
@@ -234,14 +217,11 @@ const SignUp = () => {
 						/>
 						<Button label="Register" onClick={handleRegistration} className={Styles.button} />
 						<hr className={Styles.divider} />
-						<p className={Styles.accountText}>Have an account?</p>
+						<p style={{ color: 'black', textAlign: 'center' }}>Have an account?</p>
 						<p className={Styles.registerLink} onClick={handleBack}>
 							Sign In
 						</p>
 					</div>
-				</div>
-				<div className={Styles.wordCloudContainer}>
-					<img src={World} alt="World word cloud" />
 				</div>
 			</div>
 			<Footer />

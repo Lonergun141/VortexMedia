@@ -14,13 +14,17 @@
 	src: url('../../assets/fonts/InterSemiBold.ttf') format('truetype');
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'InterRegular', sans-serif;
+}
+
 :root {
 	--font-family-juana: 'Juana', sans-serif;
 	--font-family-inter: 'Inter', sans-serif;
 	color-scheme: light dark;
 	background-color: #ffffff;
-
-	--br-7xs: 6px;
 
 	--color-white: #ffffff;
 	--color-blue: #63a7ff;

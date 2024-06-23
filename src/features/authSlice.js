@@ -156,6 +156,7 @@ export const authSlice = createSlice({
 			.addCase(logout.fulfilled, (state) => {
 				state.user = null;
 				localStorage.removeItem('user');
+				localStorage.removeItem('accessToken');
 			})
 			.addCase(activate.pending, (state) => {
 				state.isLoading = true;

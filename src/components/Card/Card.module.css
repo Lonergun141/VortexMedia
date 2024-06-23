@@ -1,79 +1,212 @@
-  
-  .content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rcap 3rcap;
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rcap 3rcap;
+}
 
-  }
+.cardContainer {
+  max-width: 800px;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
+.img {
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.noteHeader {
+  background-color: #63a7ff;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 1;
+  font-family: 'Inter';
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7); 
+  z-index: 1000; 
+}
+
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.newsProvider {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+  font-weight: 300;
+  font-family: 'Inter';
+}
+
+.headline {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  font-family: 'Inter-SemiBold';
+}
+
+.headline:hover {
+  text-decoration: underline;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  font-family: 'Inter';
+}
+
+.auth {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--color-light-gray);
+  font-family: 'Inter';
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+.removeButton {
+  background-color: #ff4444;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.removeButton:hover {
+  background-color: #cc0000;
+}
+
+.saveButton {
+  background-color: #63a7ff;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--color-light-gray);
+  font-family: 'Inter';
+  text-align: center;
+}
+
+.bookmarkIcon {
+  cursor: pointer;
+  color: gray; 
+}
+
+.bookmarkContainer {
+  margin-top: 10px;
+}
+
+.modalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; 
+  max-width: 400px; 
+  background-color: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.modalTextField {
+  margin-bottom: 16px; 
+}
+
+@media (max-width: 767px) {
   .cardContainer {
-    max-width: 800px;
-    padding: 1rem;
-    cursor: pointer;
-  }
-  
-  .img {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .logo {
-    max-width: 100%;
-    height: auto;
+    padding: 0.5rem;
   }
 
-  .newsProvider {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: var(--color-black);
-    font-weight: 300;
-    font-family: 'Inter';
-  }
-  
-  .headline {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--color-black);
-    font-family: 'Inter-SemiBold';
-  }
-  
-  .headline:hover{
-    text-decoration: underline;
-  }
-  .desc {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    color: var(--color-black);
-    font-family: 'Inter';
-  }
-  
-  .auth {
-    font-size: 0.8rem;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-    color: var(--color-light-gray);
-    font-family: 'Inter';
-  }
-  
+  .newsProvider,
+  .headline,
+  .desc,
+  .auth,
   .date {
-    font-size: 0.8rem;
-    color: var(--color-light-gray);
-    font-family: 'Inter';
+    text-align: center;
   }
-  
-  @media (max-width: 767px) {
-    .cardContainer {
-      padding: 0.5rem;
-    }
+
+  .modalBox {
+    width: 90%; 
+    padding: 10px; 
   }
-  
-  @media (max-width: 767px) {
-    .cardContainer {
-      padding: 0.5rem;
-    }
+
+  .buttonContainer {
+    flex-direction: column; 
   }
+
+  .saveButton {
+    margin-top: 12px; 
+    margin-left: 0; 
+  }
+
+  .modalTextField {
+    margin-bottom: 12px; 
+  }
+}

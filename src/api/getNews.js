@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const API_BASE_URL = 'https://d4ngk.pythonanywhere.com/api/news';
 
+
 export const getNews = async (accessToken, category, country) => {
   const config = {
     headers: {

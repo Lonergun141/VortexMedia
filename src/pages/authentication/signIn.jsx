@@ -1,17 +1,15 @@
-/* eslint-disable no-unused-vars */
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast, ToastContainer } from 'react-toastify';
+import { Modal, Box, CircularProgress } from '@mui/material';
+import { login, getUserInfo, reset } from '../../features/authSlice';
 import Footer from '../../components/footer/footer';
 import TextInput from '../../components/textField/textField';
 import Button from '../../components/button/button';
-import { Link } from 'react-router-dom';
 import Styles from './styles/authentication.module.css';
-import Logo from '../../assets/images/blackLogo.png';
-import World from '../../assets/images/worldWord.png';
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { login, getUserInfo, reset } from '../../features/authSlice';
-import { toast, ToastContainer } from 'react-toastify';
-import { Modal, Box, CircularProgress } from '@mui/material';
+import NewsPaper from '../../assets/images/newspaper.jpg';
+import Logo from '../../assets/images/vlogo.png';
 
 const SignIn = () => {
 	const [formData, setFormData] = useState({
@@ -55,7 +53,7 @@ const SignIn = () => {
 		const userData = { email, password };
 		dispatch(login(userData))
 			.unwrap()
-			.then((response) => {
+			.then(() => {
 				dispatch(getUserInfo());
 			})
 			.catch((error) => {
@@ -68,10 +66,7 @@ const SignIn = () => {
 	useEffect(() => {
 		if (isError) {
 			if (message === 'Account not activated') {
-				toast.error(
-					'Account not activated',
-					'Your account is not activated yet. Please check your email for the activation link.'
-				);
+				toast.error('Your account is not activated yet. Please check your email for the activation link.');
 			} else {
 				toast.error(message);
 			}
@@ -95,44 +90,46 @@ const SignIn = () => {
 				</Box>
 			</Modal>
 			<div className={Styles.content}>
+				<div className={Styles.wordCloudContainer}>
+					<img src={NewsPaper} alt="World word cloud" />
+				</div>
 				<div className={Styles.leftContainer}>
 					<div className={Styles.logoContainer}>
-						<img src={Logo} alt="Vortex Media Logo" />
+						<img src={Logo} alt="logo" />
 					</div>
 					<div className={Styles.signInText}>
 						<h2>Enter your email and password</h2>
-						<TextInput
-							label="Email Address"
-							width={500}
-							marginBottom={2}
-							emailError={formErrors.email}
-							value={formData.email}
-							onChange={handleChange}
-							name="email"
-						/>
-						<TextInput
-							label="Password"
-							password
-							width={500}
-							onChange={handleChange}
-							marginBottom={2}
-							passwordError={formErrors.password}
-							value={formData.password}
-							name="password"
-						/>
-						<Button label="Continue" onClick={handleLogin} className={Styles.button} />
-						<Link to="/VortexMedia/ResetPass" className={Styles.underlineLink}>
-							Forgot Password?
-						</Link>
-						<hr className={Styles.divider} />
-						<p className={Styles.accountText}>Dont have an account?</p>
-						<Link to="/VortexMedia/SignUp" className={Styles.registerLink}>
-							Register Now
-						</Link>
+						<div className={Styles.fields}>
+							<TextInput
+								label="Email Address"
+								width="100%"
+								marginBottom={2}
+								emailError={formErrors.email}
+								value={formData.email}
+								onChange={handleChange}
+								name="email"
+							/>
+							<TextInput
+								label="Password"
+								password
+								width="100%"
+								onChange={handleChange}
+								marginBottom={2}
+								passwordError={formErrors.password}
+								value={formData.password}
+								name="password"
+							/>
+							<Button label="Continue" onClick={handleLogin} className={Styles.button} />
+							<Link to="/VortexMedia/ResetPass" className={Styles.underlineLink}>
+								Forgot Password?
+							</Link>
+							<hr className={Styles.divider} />
+							<p className={Styles.accountText}>Dont have an account?</p>
+							<Link to="/VortexMedia/SignUp" className={Styles.registerLink}>
+								Register Now
+							</Link>
+						</div>
 					</div>
-				</div>
-				<div className={Styles.wordCloudContainer}>
-					<img src={World} alt="World word cloud" />
 				</div>
 			</div>
 			<Footer />
