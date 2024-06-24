@@ -161,7 +161,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px;
+    padding-left: 15px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -169,6 +169,7 @@
 .noteTitle {
     color: white;
     margin-right: 10px;
+    font-size: large;
 }
 
 .titleLink {

@@ -29,7 +29,7 @@ const SavedNewsList = () => {
                         Authorization: `Bearer ${accessToken}`,
                     },
                 });
-                setSavedArticles(response.data);
+                setSavedArticles(response.data.reverse()); 
             } catch (error) {
                 console.error('Error fetching saved articles:', error);
             } finally {
@@ -96,7 +96,6 @@ const SavedNewsList = () => {
             );
 
             if (response.status === 200) {
-                // Update the savedArticles state with the updated article
                 setSavedArticles(
                     savedArticles.map((article) => (article.id === selectedArticle.id ? { ...article, user_note: note } : article))
                 );
@@ -136,7 +135,7 @@ const SavedNewsList = () => {
                 },
             });
             if (response.status === 201) {
-                setSavedArticles([...savedArticles, response.data]);
+                setSavedArticles([response.data, ...savedArticles]); 
                 handleClose();
             }
         } catch (error) {

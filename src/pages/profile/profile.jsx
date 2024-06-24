@@ -98,7 +98,7 @@ const Profile = () => {
 							onClick={() => setOpen(true)}
 							disableElevation
 							startIcon={<DeleteIcon />}>
-							Delete Account
+							Deactivate Account
 						</Button>
 					</div>
 				</div>
@@ -119,9 +119,9 @@ const Profile = () => {
 						p: 4,
 						borderRadius: 2,
 					}}>
-					<h3>Confirm Delete</h3>
+					<h3>Confirm Deactivation</h3>
 					<div>
-						<p className={styles.modalP}>Are you sure you want to delete your account? This action cannot be undone.</p>
+						<p className={styles.modalP}>Are you sure you want to deactivate your account? This action cannot be undone.</p>
 						<TextField
 							fullWidth
 							type="password"
